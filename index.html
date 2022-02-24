@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projeto PicPro</title>
+        <!-- importação de fontes de texto do google -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap"
+            rel="stylesheet"
+        />
+        <!-- fazer a conexão com o CSS -->
+        <!-- link de conexão | referencia do arq com doc | tipo de arquivo | caminho do arquivo -->
+
+        <!-- resetar as config da tela no navegador-->
+        <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+        <!-- conecta com o arquivo de estilo -->
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    </head>
+
+    <body>
+        <!-- CABEÇALHO DA MINHA PÁGINA -->
+        <header class="cabecalho">
+            <!-- criei uma div para não deixar as imagens do meu cabeçalho soltas e flutuando -->
+            <div class="container">
+                <!-- serve para separa as imagens em blocos -->
+                <figure class="cabecalho__logoPicpro">
+                    <img src="./assets/img/logo-picpro.png" alt="logo da PicPro">
+                </figure>
+                <figure class="cabecalho__logoKenzie">
+                    <img src="./assets/img/logo-kenzie.png" alt="logo da Kenzie">
+                </figure>
+            </div>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL DA PÁGINA -->
+        <main>
+            <!-- sessão do usuário (uma divisão mais organizada do conteúdo)  -->
+            <section class="secaoDetalhesConta">
+                <!-- div para área do usuário -->
+                <div class="container">
+                    <div class="secaoDetalhesConta__sobreUsuario">
+                        <img src="./assets/img/usuario.png" alt="ícone do usuário">
+                        <p>Olá, <strong>@thainarapenha</strong></p>
+                    </div>
+                    
+                    <!-- div para área de serviços -->
+                    <div class="secaoDetalhesConta__sobreSaldo">
+                        <p>Saldo PicPay <strong>R$ 0,00</strong></p>
+                        <button>Extrato</button>
+                    </div>
+
+                    <!-- lista não ordenada para listagem dos serviços-->
+                    <ul class="secaoDetalhesConta__opcoesTransacoes">
+                        <!--  lista dos serviços -->
+                        <!--  "Button" QR Code -->
+                        <li class="secaoDetalhesConta__itemTransacao">
+                            <img src="./assets/img/qrcode-imagem.png" alt="Ícone QR Code">
+                            <p>QR Code</p>
+                        </li>
+
+                        <!--  "Button" Pix -->
+                        <li class="secaoDetalhesConta__itemTransacao">
+                            <img src="./assets/img/pix.png" alt="Ícone Pix">
+                            <p>Pix</p>
+                        </li>
+
+                        <!--  "Button" Boleto -->
+                        <li class="secaoDetalhesConta__itemTransacao">
+                            <img src="./assets/img/codigo.png" alt="Ícone Boleto">
+                            <p>Pagar boleto</p>
+                        </li>
+
+                        <!--  "Button" Cobrar -->
+                        <li class="secaoDetalhesConta__itemTransacao">
+                            <img src="./assets/img/cobrar-icon.png" alt="Ícone cobrar">
+                            <p>Cobrar</p>
+                        </li>
+                    </ul><!-- FIM DA lista não ordenada -->
+                </div><!-- FIM DA class container -->
+
+            </section><!-- FIM DA sessão do usuário -->
+
+            <!-- sessão das funções -->
+            <section class="secaoTransacao">
+                <!-- div geral (todas as funções) -->
+                <div class="container">
+                    <!-- div da forma de pagamento -->
+                    <div class="secaoTransacao__avisoSelecao">
+                        <p>Selecione a forma de pagamento</p>
+                        <img src="./assets/img/Banner.png" alt="Banner do PicPay">
+                    </div>
+
+                    <!-- div do qr code -->
+                    <div class="secaoTransacao__qrCode">
+                        <img src="./assets/img/qrcode-imagem.png" alt="Imagem do qr code">
+                        <p>@thainarapenha</p>
+                        <button>Cobre um amigo</button>
+                        <a href="#">Compartilhar meu código</a>
+                    </div>
+
+                    <!-- div do pix -->
+                    <div class="secaoTransacao__pix">
+                        <!-- imagem principal do pix -->
+                        <img src="./assets/img/pix-logo.png" alt="Imagem do pix">
+
+                        <!-- 1° caixinha de opção do pix -->
+                        <div class="secaoTransacao__boxOpcao">
+                            <img src="./assets/img/pix1.png" alt="ícone opção pix">
+                            <p>Envie por CPF/CNPJ, telefone, e-mail ou chave aleatória </p>
+                        </div>
+
+                        <!-- 2° caixinha de opção do pix -->
+                        <div class="secaoTransacao__boxOpcao">
+                            <img src="./assets/img/pix2.png" alt="ícone opção pix">
+                            <p>Insira um código Pix Copia e cola para enviar o pagamento </p>
+                        </div>
+                    </div>
+
+                    <!-- div do boleto -->
+                    <div class="secaoTransacao__boleto">
+                        <img src="./assets/img/boleto.png" alt="icone opção boleto">
+                        <h2>Pagar com código de barras</h2>
+                        <p>Você pode parcelar em até 12x no cartão ou usar seu saldo em carteira para pagar à vista</p>
+
+                        <!-- campo que coleta o código de barras -->
+                        <input type="text" placeholder="Insira o código de barras"><!-- placeholder é o txt dentro do campo -->
+                    </div>
+
+                    <!-- div de cobrar -->
+                    <div class="secaoTransacao__cobrar">
+                        <img src="./assets/img/cobrar-icon.png" alt="ícone opção cobrar">
+                        <h2>Cobrar</h2>
+                        <p>Divida a conta com os amigos de forma fácil</p>
+
+                        <!-- caixinha de opção cobrar -->
+                        <div class="secaoTransacao__boxOpcao">
+                            <img src="./assets/img/picpay-icon.png" alt="ícone opção picpay">
+                            <p>
+                                <strong>Amigos no PicPay</strong> Divida e acompanhe um gasto com pessoas aqui
+                            </p>
+                        </div>
+                    </div>
+                </div><!-- FIM DA div container -->
+            </section><!-- FIM DA sessão das funções -->
+
+            <!-- sessão de rodapé -->
+            <footer class="rodape">
+                <div class="container">
+                    <!-- lista não ordenada -->
+                    <ul class="rodape__menuPrincipal">
+                        <!-- Item início da lista -->
+                        <li class="rodape__menuItem">
+                            <a href="#">
+                                <img src="./assets/img/inicio.png" alt="ícone de início">
+                                <p>Início</p>
+                            </a>
+                        </li>
+
+                        <!-- Item carteira da lista -->
+                        <li class="rodape__menuItem">
+                            <a href="#">
+                                <img src="./assets/img/carteira-icon.png" alt="ícone de carteira">
+                                <p>Carteira</p>
+                            </a>
+                        </li>
+
+                        <!-- Item Pagar da lista -->
+                        <li class="rodape__menuItem rodape__menuItem--pagar">
+                            <a href="#">
+                                <img src="./assets/img/pagar.png" alt="ícone de pagar">
+                                <p>Pagar</p>
+                            </a>
+                        </li>
+
+                        <!-- Item Notificações da lista -->
+                        <li class="rodape__menuItem">
+                            <a href="#">
+                                <img src="./assets/img/notificacao.png" alt="ícone de notificações">
+                                <p>Notificações</p>
+                            </a>
+                        </li>
+
+                        <!-- Item Store da lista -->
+                        <li class="rodape__menuItem">
+                            <a href="#">
+                                <img src="./assets/img/bolsa.png" alt="ícone de store">
+                                <p>Store</p>
+                            </a>
+                        </li>
+                    </ul><!-- FIM DA sessão de lista não ordenada -->
+                </div><!-- FIM DA div de rodapé -->
+            </footer><!-- FIM DA sessão de rodapé -->
+        </main><!-- FIM DA sessão main -->
+    </body>
+</html>
