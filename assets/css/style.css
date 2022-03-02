@@ -45,6 +45,17 @@ body{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.secaoDetalhesConta__sobreUsuario--nome,
+.secaoDetalhesConta__sobreUsuario--icones{
+    display: flex;
+    align-items: center;
+}
+
+.secaoDetalhesConta__sobreUsuario--icones img{
+    margin: 0 10px;
 }
 
 .secaoDetalhesConta__sobreUsuario p{
@@ -56,6 +67,7 @@ body{
     display: block;
     font-weight: bold; /*da um peso maior, tipo um bold a mais sobre o strong do txt*/
 }
+
 .secaoDetalhesConta__sobreUsuario img{
     width: 100%;
     max-width: 50px;
@@ -75,9 +87,19 @@ body{
     line-height: 22px; /*define o tamanho da linha*/
 }
 
-.secaoDetalhesConta__sobreSaldo p strong{
-    display: block;
+.secaoDetalhesConta__sobreSaldo--valor{
+    display: flex;
+}
+
+.secaoDetalhesConta__sobreSaldo--valor p{
     font-weight: bold;
+}
+
+.secaoDetalhesConta__sobreSaldo--valor img{
+    display: block;
+    height: 18px;
+    width: 30px;
+    margin-left: 12px;
 }
 
 .secaoDetalhesConta__sobreSaldo button{
@@ -102,6 +124,7 @@ body{
     height: 177;
     border-radius: 20px;
     padding: 40px 20px;
+    cursor: pointer;
 }
 
 .secaoDetalhesConta__opcoesTransacoes li img{
@@ -117,11 +140,81 @@ body{
     max-width: 80px;
 }
 
+.secaoDetalhesConta__itemTransacao:hover{
+    background-color: #fff;
+    color: #1F6F54;
+}
+
+.secaoDetalhesConta__itemTransacao figure{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+
+.secaoDetalhesConta__itemTransacao--qrcode figure{
+    background-image: url("../img/qrcode.png");
+    width: 100%;
+    max-width: 50px;
+}
+
+.secaoDetalhesConta__itemTransacao--pix figure{
+    background-image: url("../img/pix.png");
+    width: 100%;
+    max-width: 50px;
+}
+
+.secaoDetalhesConta__itemTransacao--boleto figure{
+    background-image: url("../img/codigo.png");
+    width: 100%;
+    max-width: 65px;
+}
+
+.secaoDetalhesConta__itemTransacao--cobrar figure{
+    background-image: url("../img/cobrar-icon.png");
+    width: 100%;
+    max-width: 60px;
+}
+
+.secaoDetalhesConta__itemTransacao--qrcode:hover figure{
+    background-image: url("../img/qrcode-verde.png");
+}
+
+.secaoDetalhesConta__itemTransacao--pix:hover figure{
+    background-image: url("../img/pix-verde.png");
+}
+
+.secaoDetalhesConta__itemTransacao--boleto:hover figure{
+    background-image: url("../img/boleto-verde.png");
+}
+
+.secaoDetalhesConta__itemTransacao--cobrar:hover figure{
+    background-image: url("../img/cobrar-verde.png");
+}
+
+.secaoDetalhesConta__itemTransacao figure img{
+    width: 100%;
+    max-width: 25px;
+    height: 20px;
+    opacity: 0;
+}
+
 .secaoTransacao{
     background-color: #fff;
     border-radius: 20px 20px 0 0;
     border-bottom: 15px solid #F4F4F4;
     padding: 30px 0;
+    min-height: 450px;
+}
+
+/*atuação direta do script*/
+.secaoTransacao .container div{
+    display: none; /*estou dizendo que as div da class container devem ficar escondidas*/
+}
+
+/*atuação direta do script*/
+.secaoTransacao .container div.mostrar{
+    display: block;
 }
 
 .secaoTransacao__avisoSelecao p{
@@ -196,10 +289,6 @@ body{
     line-height: 20px;
 }
 
-.secaoTransacao__boleto{
-
-}
-
 .secaoTransacao__boleto img{
     width: 100%;
     max-width: 80px;
@@ -226,10 +315,6 @@ body{
     border: 1px solid #d2d2d2;
     color: black;
     box-sizing: border-box; /*força o elemento a respeitar a largura independente do padding*/
-}
-
-.secaoTransacao__cobrar{
-
 }
 
 .secaoTransacao__cobrar img{
